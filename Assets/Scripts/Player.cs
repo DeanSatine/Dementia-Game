@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Camera cam;//Camera object
     private Rigidbody rb;//This object's rigidbody component
     [SerializeField] LayerMask ObjectLayer;//Object search layer
+    [SerializeField] TextMeshProUGUI TextBox;
 
     [Header("Move")]
     [SerializeField] private float Speed = 5.0f;//Speed increase per secnod
@@ -22,7 +24,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float MinAngleY = -50.0f;//Highest look angle
     [SerializeField] private float MaxAngleY = 70.0f;//Lowest look agle
     private Vector2 Rotation = Vector2.zero;//Look direction
+    private Object LookObject = null;
+    private string LookText = "";
 
+    [Header("Grab")]
+    [SerializeField] private float GrabRayRadius = 0.3f;//Radius of grab SphereCast
+    [SerializeField] private float Reach = 3.0f;
 
     void Start()
     {
@@ -41,6 +48,13 @@ public class Player : MonoBehaviour
 
     }
 
+    void Update() 
+    {
+        LookObject = GetLook();//Display LookObject text
+        if (LookObject != null) LookText = LookObject.DisplayText;
+        else LookText = "";
+        TextBox.text = LookText;
+    }
     public void Move(Vector3 new_dirs)//Set velocity
     {
         Dirs = new_dirs;//Set move direction to inputed direction
@@ -57,17 +71,19 @@ public class Player : MonoBehaviour
         cam.transform.localRotation = LookY;//Set new look direction
 
         transform.localRotation = LookX;
-
     }
 
     public void Grab()//Attempt object interaction
     {
-        Debug.Log("Grab");
-        if (Physics.SphereCast(cam.transform.position, 0.3f, cam.transform.forward, out RaycastHit hit, 3, ObjectLayer))
+        if (LookObject != null) LookObject.Select();//If pointing at an object, select the object
+    }
+
+    Object GetLook() {
+        if (Physics.SphereCast(cam.transform.position, GrabRayRadius, cam.transform.forward, out RaycastHit hit, Reach, ObjectLayer))
         {
-            Debug.Log("Hit");
-            hit.collider.gameObject.GetComponent<Object>().Collect();
+            return hit.collider.gameObject.GetComponent<Object>();
         }
+        else return null;
     }
 
 }
