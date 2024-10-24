@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] bool displayCount = true;
     [SerializeField] Text CountText;
+    [SerializeField] Text GuessText;
 
     void Start()
     {
@@ -30,13 +31,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Fade) FadeImage.color = new Color(0, 0, 0, FadeImage.color.a + FadeSpeed * Time.deltaTime);//If fading, increase fade image alpha
-        else FadeImage.color = new Color(0, 0, 0, FadeImage.color.a - FadeSpeed * Time.deltaTime);//Decrease fade image alpha
+        float FadeAmount = Mathf.Clamp(FadeSpeed * Time.deltaTime, 0.001f, 1);
+        if (Fade) FadeImage.color = new Color(0, 0, 0, Mathf.Clamp(FadeImage.color.a + FadeAmount, 0, 1));//If fading, increase fade image alpha
+        else FadeImage.color = new Color(0, 0, 0, Mathf.Clamp(FadeImage.color.a - FadeAmount, 0, 1));//Decrease fade image alpha
 
+        
         if (FadeImage.color.a >= 1) {//When fading is over
 
             //Activate win or lose functions
-            if (Lose) SceneManager.LoadScene("FaliureUI");//Reset game
+            if (Lose) SceneManager.LoadScene("FailureUI");//Reset game
             else SetNextScene();//SetNextScene();
 
         }
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
         }
         else {
             WrongGuesses += 1;//Increase wrong guess counter
+            GuessText.text += "X";
 
             if (WrongGuesses >= MaxGuesses) LoseGame();//If wrong guesses exceeds max allowed, lose game
             
@@ -71,7 +75,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("End");
         if (WrongObjects > 0) Lose = false;//Determine if all displaced objects are found
         Fade = true;//Start fading
-        FadeImage.color = new Color(0, 0, 0, 0.05f);
     }
 
     private void LoseGame() {//Force game to end
