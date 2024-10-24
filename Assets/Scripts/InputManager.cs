@@ -14,18 +14,8 @@ public class InputManager : MonoBehaviour
 
         _controls.Game.Enable();//Enable game controls
 
-        Cursor.lockState = CursorLockMode.Locked;//Lock cursor position
-        Cursor.visible = false;//Hide cursor
-
-        _controls.Game.Move.performed += ctx =>//Move player
-        {
-            player.Move(ctx.ReadValue<Vector3>());
-        };
-
-        _controls.Game.Look.performed += ctx =>//Rotate player
-        {
-            player.Look(ctx.ReadValue<Vector2>());
-        };
+        //Cursor.lockState = CursorLockMode.Locked;//Lock cursor position
+        //Cursor.visible = false;//Hide cursor
 
         _controls.Game.Action.performed += ctx =>//Attemp object interaction
         {
