@@ -11,6 +11,7 @@ public class Object : MonoBehaviour
     [SerializeField] private Vector3 CorrectPos = Vector3.zero;//Correct Position
     [SerializeField] private Vector3 CorrectRot = Vector3.zero;//Correct Rotation
     [SerializeField] private Vector3 CorrectSca = Vector3.one;//Correct Scale
+    [SerializeField] private string CorrectText = "name";
 
     [Header("Extra")]
     [SerializeField] private bool isExit = false;//Is this the room exit (does it end the scene)
@@ -25,12 +26,18 @@ public class Object : MonoBehaviour
     void Start() {
         if (Wrong) Manager.WrongObjects += 1;//If this object is displaced, increase wrong objects in game
         if (DisplayText == "name") DisplayText = gameObject.name;//If no display text is set, set display text to name
-        if (CorrectPos == Vector3.zero) CorrectPos = transform.position;//Setup coorect transform
+        if (CorrectText == "name") CorrectText = gameObject.name;//Setup Correct Text
+        if (CorrectPos == Vector3.zero) CorrectPos = transform.position;//Setup corect transform
         if (CorrectRot == Vector3.zero) CorrectRot = transform.rotation.eulerAngles;
     }
 
     public void Select()//Advance the game
     {
+
+        if (Sound != null) {//Play sound
+            GetComponent<AudioSource>().clip = Sound;
+            GetComponent<AudioSource>().Play();
+        }
 
         if (isExit) {//If marked as the level exit, end the level
             Manager.End();
@@ -56,11 +63,6 @@ public class Object : MonoBehaviour
             }
         }
 
-        if (Sound != null) {//Play sound
-            GetComponent<AudioSource>().clip = Sound;
-            GetComponent<AudioSource>().Play();
-        }
-
         Manager.Guess(Wrong);//Trigger game manager guess based on Wrong
 
         if (Wrong) {//If object is worng, fix its position
@@ -70,6 +72,8 @@ public class Object : MonoBehaviour
 
             transform.rotation = Quaternion.identity;
             transform.Rotate(CorrectRot);
+
+            DisplayText = CorrectText;
 
         }
 

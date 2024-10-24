@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private AudioSource audio;
     [HideInInspector] public int WrongObjects = 0;//Number of incorrectly positioned objects (set automaticaly)
     [SerializeField] int MaxGuesses = 3;//Maximum guesses
     [SerializeField] string NextScene;//Next level scene
@@ -15,10 +16,15 @@ public class GameManager : MonoBehaviour
     private bool Fade = false;//Start fading
     private bool Lose = false;//Game lost
     private int WrongGuesses = 0;//Number of incorrect guesses
+    [SerializeField] AudioClip GoodSound;
+    [SerializeField] AudioClip BadSound;
+
+    [SerializeField] bool displayCount = true;
+    [SerializeField] Text CountText;
 
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,24 +36,34 @@ public class GameManager : MonoBehaviour
         if (FadeImage.color.a >= 1) {//When fading is over
 
             //Activate win or lose functions
-            if (Lose) Debug.Log("Game Over");//Reset game
+            if (Lose) SceneManager.LoadScene("FaliureUI");//Reset game
             else SetNextScene();//SetNextScene();
 
         }
+
+        if (displayCount) CountText.text = WrongObjects.ToString();
+        else CountText.text = "???";
+
     }
 
     public void Guess(bool correct) {//Object was guessed
         
         if (correct) {//If object is displaced
             WrongObjects -= 1;//Decrease displaced object counter
+
+            audio.clip = GoodSound;
+
         }
         else {
             WrongGuesses += 1;//Increase wrong guess counter
 
             if (WrongGuesses >= MaxGuesses) LoseGame();//If wrong guesses exceeds max allowed, lose game
-    
+            
+            audio.clip = BadSound;
+
         }
 
+        audio.Play();
 
     }
 
@@ -64,6 +80,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void SetNextScene() {//Load the next scene
+        Debug.Log("Success");
         SceneManager.LoadScene(NextScene);
     }
 

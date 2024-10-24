@@ -6,18 +6,19 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
 
     [SerializeField] GameObject aer;
     [Header("Reference")]
-    [SerializeField] GameManager manager;
+    //[SerializeField] GameManager manager;
     [SerializeField] private Camera cam;//Camera object
     private Rigidbody rb;//This object's rigidbody component
     private Animator animator;
     [SerializeField] LayerMask ObjectLayer;//Object search layer
-    [SerializeField] TextMeshProUGUI TextBox;
+    [SerializeField] Text TextBox;
 
     [Header("Navigation")]
     NavMeshAgent Agent;
