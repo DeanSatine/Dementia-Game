@@ -3,7 +3,47 @@ guid: 559dfcaf61ad2464db6e5de2cc97e4ea
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 8ee1ebaccb5227f42b3f565737939b44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes White
+    second: {fileID: 2100000, guid: 178467c2b7bea5d4b8fb98ab1e988b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 19a895bc53dc59342816eb8a72e7fa34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants
+    second: {fileID: 2100000, guid: a6a30f1319da17b4c9a4d91567e1427c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants.001
+    second: {fileID: 2100000, guid: a6a30f1319da17b4c9a4d91567e1427c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: ed09c53ae8feb9e4f9a84d007c89a887, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin Tone
+    second: {fileID: 2100000, guid: a1703b7d915847949b5c06a32206eb89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tie
+    second: {fileID: 2100000, guid: 19b7c4b0835962e488de923c92774f90, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
