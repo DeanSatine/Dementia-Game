@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] GameObject aer;
+    public bool sleep = false;
     [Header("Reference")]
     //[SerializeField] GameManager manager;
     [SerializeField] private Camera cam;//Camera object
@@ -43,11 +43,20 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+        if (sleep) {
+            Agent.enabled = false;
+            transform.position = new Vector3(-6.66022825f,2.64779639f,3.34951925f);
+            transform.rotation = new Quaternion(0.0162829291f,0.867352009f,0.489247143f,0.0898483768f);
+            animator.SetBool("Grab", false);
+            return;
+        }
 
         animator.SetBool("Grab", false);
         if (Moving && Agent.remainingDistance <= Agent.stoppingDistance) {
             Moving = false;
             Selected.Select();
+            if (Selected.isExit) sleep = true;
             Selected = null;
             Agent.enabled = false;
             animator.SetBool("Grab", true);

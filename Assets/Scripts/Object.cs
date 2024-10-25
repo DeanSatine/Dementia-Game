@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Jobs;
+using UnityEngine.UI;
 
 public class Object : MonoBehaviour
 {
@@ -14,12 +15,15 @@ public class Object : MonoBehaviour
     [SerializeField] private string CorrectText = "name";
 
     [Header("Extra")]
-    [SerializeField] private bool isExit = false;//Is this the room exit (does it end the scene)
+    [SerializeField] public bool isExit = false;//Is this the room exit (does it end the scene)
     [SerializeField] private bool DisableSelf = false;//Disable self when selected
-    [SerializeField] private GameObject[] Activate = new GameObject[0];//Objects to activate
-    [SerializeField] private GameObject[] Deactivate = new GameObject[0];//Objects to deactivate
+    //[SerializeField] private GameObject[] Activate = new GameObject[0];//Objects to activate
+    //[SerializeField] private GameObject[] Deactivate = new GameObject[0];//Objects to deactivate
     [SerializeField] private AudioClip Sound = null;//Sound to play
     [SerializeField] public string DisplayText = "name";//Text to display
+
+    Text TextBox;
+    [TextArea(4, 100)] [SerializeField] private string SelectText = "";
 
     private bool selected = false;//Has this object been selected
 
@@ -29,6 +33,7 @@ public class Object : MonoBehaviour
         if (CorrectText == "name") CorrectText = gameObject.name;//Setup Correct Text
         if (CorrectPos == Vector3.zero) CorrectPos = transform.position;//Setup corect transform
         if (CorrectRot == Vector3.zero) CorrectRot = transform.rotation.eulerAngles;
+        TextBox = Manager.ObjectText;
     }
 
     public void Select()//Advance the game
@@ -39,6 +44,8 @@ public class Object : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
 
+        TextBox.text = SelectText;
+
         if (isExit) {//If marked as the level exit, end the level
             Manager.End();
             return;
@@ -46,7 +53,7 @@ public class Object : MonoBehaviour
 
         if (selected) return;//If already selected, return
         else selected = true;//Otherwise set as selected
-
+        /*
         if (Activate.Length > 0)//Activate listed objects
         {
             for (int i = 0; i < Activate.Length; i++)
@@ -62,7 +69,7 @@ public class Object : MonoBehaviour
                 Deactivate[i].SetActive(false);
             }
         }
-
+        */
         Manager.Guess(Wrong);//Trigger game manager guess based on Wrong
 
         if (Wrong) {//If object is worng, fix its position

@@ -279,11 +279,9 @@ MonoBehaviour:
   CorrectText: Dictionary
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Dictionary
+  SelectText: 
 --- !u!64 &140371968
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -656,11 +654,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
+  SelectText: 
 --- !u!1 &261066572
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061ace159199e314d93fc843a3d4776d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aer: {fileID: 0}
+  sleep: 0
   cam: {fileID: 261066574}
   ObjectLayer:
     serializedVersion: 2
@@ -993,8 +989,8 @@ RectTransform:
   - {fileID: 825106928}
   - {fileID: 1760118776}
   - {fileID: 1285521870}
-  - {fileID: 2090976995}
   - {fileID: 1927616696}
+  - {fileID: 2090976995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1049,11 +1045,9 @@ MonoBehaviour:
   CorrectText: Small Picture
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Small Picture
+  SelectText: 
 --- !u!64 &548430202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1787,11 +1781,9 @@ MonoBehaviour:
   CorrectText: Walking Stick
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Walking Stick
+  SelectText: 
 --- !u!114 &788955808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1812,11 +1804,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
+  SelectText: 
 --- !u!114 &788955809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,11 +1827,9 @@ MonoBehaviour:
   CorrectText: Sleep
   isExit: 1
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 8300000, guid: 26e03dcbd104f844bb86ed21ce6c0a9c, type: 3}
   DisplayText: Sleep
+  SelectText: 
 --- !u!114 &788955810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,11 +1850,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: ????????????
+  SelectText: Oh right
 --- !u!114 &788955811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,11 +1873,9 @@ MonoBehaviour:
   CorrectText: Photo Book
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Photo Book
+  SelectText: 
 --- !u!82 &788955813
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2670,11 +2654,9 @@ MonoBehaviour:
   CorrectText: Novel
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Novel
+  SelectText: 
 --- !u!64 &930591939
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3027,11 +3009,9 @@ MonoBehaviour:
   CorrectText: Encyclopedia
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Dictionary
+  SelectText: Oh Right
 --- !u!64 &1135018349
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3287,6 +3267,7 @@ MonoBehaviour:
   displayCount: 1
   CountText: {fileID: 825106929}
   GuessText: {fileID: 1285521871}
+  ObjectText: {fileID: 1595316332}
 --- !u!4 &1199495958
 Transform:
   m_ObjectHideFlags: 0
@@ -3847,11 +3828,9 @@ MonoBehaviour:
   CorrectText: Picture
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Picture
+  SelectText: 
 --- !u!64 &1377539766
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4278,11 +4257,9 @@ MonoBehaviour:
   CorrectText: Recipe Book
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Recipe Book
+  SelectText: 
 --- !u!64 &1443079763
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4517,11 +4494,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Picture
+  SelectText: 
 --- !u!64 &1444535366
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4843,11 +4818,9 @@ MonoBehaviour:
   CorrectText: Novel
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Novel
+  SelectText: 
 --- !u!64 &1523283235
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5206,7 +5179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061ace159199e314d93fc843a3d4776d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aer: {fileID: 1439424775}
+  sleep: 0
   cam: {fileID: 261066574}
   ObjectLayer:
     serializedVersion: 2
@@ -5334,11 +5307,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nothing
+  m_Text: 'am I forgeting
 
-    Wrong
-
-    With This!'
+    something?'
 --- !u!222 &1595316333
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5367,11 +5338,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
+  SelectText: 
 --- !u!64 &1632952304
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5606,11 +5575,9 @@ MonoBehaviour:
   CorrectText: Large Picture
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Large Picture
+  SelectText: 
 --- !u!64 &1661753280
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6221,11 +6188,9 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Telephone
+  SelectText: Oh Right
 --- !u!64 &1849975161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6460,11 +6425,9 @@ MonoBehaviour:
   CorrectText: Telephone
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Telephone
+  SelectText: 
 --- !u!64 &1869900474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6910,7 +6873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1927616696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7016,11 +6979,9 @@ MonoBehaviour:
   CorrectText: Trash Can
   isExit: 0
   DisableSelf: 0
-  Activate:
-  - {fileID: 1927616695}
-  Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Trash Can
+  SelectText: 
 --- !u!64 &2033706060
 MeshCollider:
   m_ObjectHideFlags: 0

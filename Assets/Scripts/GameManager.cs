@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool displayCount = true;
     [SerializeField] Text CountText;
     [SerializeField] Text GuessText;
+    public Text ObjectText;
 
     void Start()
     {

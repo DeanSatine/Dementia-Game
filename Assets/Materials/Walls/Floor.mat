@@ -8,23 +8,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Floor
-  m_Shader: {fileID: 4800000, guid: 8da3d90ffd42e624499ae6a1ca478bee, type: 3}
+  m_Shader: {fileID: 4800000, guid: b61c87e18be7a4743a4c1b9273915f70, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - BSSBLOOMFOGTYPE_HEIGHT
-  - VIGNETTE_MASKED
-  - _LIGHTINGMODE_SHADEMAP
-  - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
-  - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords:
-  - _TPS_ANIMATEDTOGGLE_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: 7f94f765c5c40244f847cc0865a357ab,4b4873aa233e4a9468200227f1947884,49e87f7b7e6150547a3275b9397f19bb,df9c23b4ddfef4b4d96057966cb10c1c,2c1651f3e86da2048be54291b5629bfd,19a895bc53dc59342816eb8a72e7fa34,9af5fac4a24d46a4ba67f29636df2485,0d55dd706b5b49c43878bc0f24030485,11062454c21464e40b3318caf0ecf9a4,f1d8d4d7d74f6f0469ce1785ff12a8c6,3f8a4f0aceb029e46a2dcb6931dde859,745a12ba55139794ba581e4e6cd32249,dfb07ceeacb5bf347bc306c36a670cef,77e6c4c8ce69abb41ade2e2a4204d002
+    OriginalShader: .poiyomi/Poiyomi Pro
+    OriginalShaderGUID: 8da3d90ffd42e624499ae6a1ca478bee
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -2407,7 +2404,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

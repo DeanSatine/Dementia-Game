@@ -242,7 +242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: XXX
+  m_Text: 
 --- !u!222 &137239208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061ace159199e314d93fc843a3d4776d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aer: {fileID: 0}
+  sleep: 0
   cam: {fileID: 261066574}
   ObjectLayer:
     serializedVersion: 2
@@ -4112,43 +4112,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7
+      value: -6.6602283
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: 2.6477964
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 3.3495193
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.08984838
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.01628293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.867352
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.48924714
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -57.755
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 161.217
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 12.575
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 559dfcaf61ad2464db6e5de2cc97e4ea, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -4234,7 +4234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061ace159199e314d93fc843a3d4776d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aer: {fileID: 1439424775}
+  sleep: 0
   cam: {fileID: 261066574}
   ObjectLayer:
     serializedVersion: 2
