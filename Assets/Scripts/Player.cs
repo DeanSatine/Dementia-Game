@@ -44,11 +44,13 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
+        animator.SetBool("Grab", false);
         if (Moving && Agent.remainingDistance <= Agent.stoppingDistance) {
             Moving = false;
             Selected.Select();
             Selected = null;
             Agent.enabled = false;
+            animator.SetBool("Grab", true);
         }
         
         if (!Moving) {
@@ -62,6 +64,9 @@ public class Player : MonoBehaviour
             //transform.LookAt(aer.transform.position);
             transform.LookAt(new Vector3(LookPoint.x, transform.position.y, LookPoint.z));
         }
+
+        animator.SetFloat("VelocityX", Agent.velocity.x);
+        animator.SetFloat("VelocityY", Agent.velocity.y);
 
     }
 
@@ -83,6 +88,7 @@ public class Player : MonoBehaviour
             Agent.enabled = true;
             Agent.SetDestination(MoveTo);
             Moving = true;
+            
         }
     }
 

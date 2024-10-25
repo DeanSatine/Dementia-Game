@@ -278,7 +278,8 @@ MonoBehaviour:
   CorrectText: Dictionary
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Dictionary
@@ -447,7 +448,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.5
+  m_VoxelSize: 0.6666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ce6f67fab23587444b07284b4e05201d, type: 2}
   m_BuildHeightMesh: 0
@@ -558,7 +559,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
@@ -894,6 +896,7 @@ RectTransform:
   - {fileID: 1541304634}
   - {fileID: 1525896503}
   - {fileID: 843702572}
+  - {fileID: 1046518437}
   - {fileID: 2090976995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -949,7 +952,8 @@ MonoBehaviour:
   CorrectText: Small Picture
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Small Picture
@@ -1615,7 +1619,8 @@ MonoBehaviour:
   CorrectText: Walking Stick
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Walking Stick
@@ -1639,7 +1644,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
@@ -1663,7 +1669,8 @@ MonoBehaviour:
   CorrectText: Sleep
   isExit: 1
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 8300000, guid: 26e03dcbd104f844bb86ed21ce6c0a9c, type: 3}
   DisplayText: Sleep
@@ -1687,7 +1694,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
@@ -1711,7 +1719,8 @@ MonoBehaviour:
   CorrectText: Photo Book
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Photo Book
@@ -2081,7 +2090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 960, y: 930}
+  m_AnchoredPosition: {x: 543, y: -213}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843702573
@@ -2300,7 +2309,8 @@ MonoBehaviour:
   CorrectText: Novel
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Novel
@@ -2422,6 +2432,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1046518436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046518437}
+  - component: {fileID: 1046518439}
+  - component: {fileID: 1046518438}
+  m_Layer: 5
+  m_Name: Correct
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1046518437
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046518436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.76, y: 3.76, z: 3.76}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1424093157}
+  m_Father: {fileID: 381975642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 228, y: -185}
+  m_SizeDelta: {x: 146.5244, y: 159.2115}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1046518438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046518436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 16ae47fb4a205d846955c6027b049b21, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1046518439
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046518436}
+  m_CullTransparentMesh: 1
 --- !u!1 &1060796484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2645,8 @@ MonoBehaviour:
   CorrectText: Encyclopedia
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Encyclopedia
@@ -3107,7 +3194,8 @@ MonoBehaviour:
   CorrectText: Picture
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Picture
@@ -3229,6 +3317,87 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1424093156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424093157}
+  - component: {fileID: 1424093159}
+  - component: {fileID: 1424093158}
+  m_Layer: 5
+  m_Name: Wrong Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1424093157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424093156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1046518437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.1, y: -78.4}
+  m_SizeDelta: {x: 800, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1424093158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424093156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3b612e6539cb14841a50257192a328e4, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 72
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'I Think
+
+    This Is Fine.'
+--- !u!222 &1424093159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424093156}
+  m_CullTransparentMesh: 1
 --- !u!1 &1439424775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3609,8 @@ MonoBehaviour:
   CorrectText: Recipe Book
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Recipe Book
@@ -3582,7 +3752,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Picture
@@ -3810,7 +3981,8 @@ MonoBehaviour:
   CorrectText: Novel
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Novel
@@ -3966,8 +4138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -70}
-  m_SizeDelta: {x: 800, y: 100}
+  m_AnchoredPosition: {x: 890, y: -110}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525896504
 MonoBehaviour:
@@ -3991,11 +4163,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3b612e6539cb14841a50257192a328e4, type: 3}
-    m_FontSize: 72
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 72
+    m_MinSize: 1
+    m_MaxSize: 130
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4312,7 +4484,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
@@ -4454,7 +4627,8 @@ MonoBehaviour:
   CorrectText: Large Picture
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Large Picture
@@ -4797,7 +4971,8 @@ MonoBehaviour:
   CorrectText: name
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: name
@@ -4939,7 +5114,8 @@ MonoBehaviour:
   CorrectText: Telephone
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Telephone
@@ -5226,7 +5402,8 @@ MonoBehaviour:
   CorrectText: Trash Can
   isExit: 0
   DisableSelf: 0
-  Activate: []
+  Activate:
+  - {fileID: 1046518436}
   Deactivate: []
   Sound: {fileID: 0}
   DisplayText: Trash Can

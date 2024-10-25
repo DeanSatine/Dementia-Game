@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        FadeImage.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
