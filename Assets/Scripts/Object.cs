@@ -34,15 +34,16 @@ public class Object : MonoBehaviour
         if (CorrectPos == Vector3.zero) CorrectPos = transform.position;//Setup corect transform
         if (CorrectRot == Vector3.zero) CorrectRot = transform.rotation.eulerAngles;
         TextBox = Manager.ObjectText;
+        if (Sound != null) GetComponent<AudioSource>().clip = Sound;
     }
 
     public void Select()//Advance the game
     {
 
         if (Sound != null) {//Play sound
-            GetComponent<AudioSource>().clip = Sound;
             GetComponent<AudioSource>().Play();
         }
+        GetComponent<AudioSource>().mute = false;
 
         TextBox.text = SelectText;
 

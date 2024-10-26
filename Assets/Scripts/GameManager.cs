@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float FadeSpeed = 0.4f;//Fade % per second
     private bool Fade = false;//Start fading
     private bool Lose = false;//Game lost
+    private bool fail = false;
     private int WrongGuesses = 0;//Number of incorrect guesses
     [SerializeField] AudioClip GoodSound;
     [SerializeField] AudioClip BadSound;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
 
             //Activate win or lose functions
             if (Lose) SceneManager.LoadScene("FailureUI");//Reset game
+            else if (fail) SceneManager.LoadScene("FailureUI2");
             else SetNextScene();//SetNextScene();
 
         }
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void End() {//End level
         Debug.Log("End");
-        if (WrongObjects > 0) Lose = false;//Determine if all displaced objects are found
+        if (WrongObjects > 0) fail = true;//Determine if all displaced objects are found
         Fade = true;//Start fading
     }
 
